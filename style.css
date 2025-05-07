@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #adfff1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    background-color: #adfff1;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Farebný text a odkazy */
+.rgb-text {
+    animation: rgbBlink 3s linear infinite;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Špeciálne pre nadpis */
+nav h2.rgb-text {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Špeciálne pre tlačidlá */
+.nav-buttons a.rgb-text {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+/* RGB animácia */
+@keyframes rgbBlink {
+    0%   { color: rgb(255, 0, 0); }
+    25%  { color: rgb(0, 140, 0); }
+    50%  { color: rgb(0, 0, 255); }
+    75%  { color: rgb(0, 0, 0); }
+    100% { color: rgb(255, 0, 255); }
+}
+
+/* Obsah pod navbarom */
+.container {
+    padding-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.download-button {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #00bb9b;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-button:hover {
+    background-color: #007c66;
+    transform: scale(1.03);
+}
